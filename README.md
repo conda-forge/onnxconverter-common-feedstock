@@ -1,11 +1,11 @@
-About onnxconverter-common
-==========================
+About onnxconverter-common-feedstock
+====================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/onnxconverter-common-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/microsoft/onnxconverter-common
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/onnxconverter-common-feedstock/blob/main/LICENSE.txt)
 
 Summary: Common utilities for ONNX converters
 
