@@ -11,17 +11,17 @@ source:
   sha256: a7eb7067875b498a5db4ca75ae67c8b258b489ea85acce23e95a0d0d522c79ca
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - packaging
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy
     - protobuf ==3.20.2
     - onnx
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/microsoft/onnxconverter-common
