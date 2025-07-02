@@ -1,5 +1,5 @@
 {% set name = "onnxconverter-common" %}
-{% set version = "1.14.0" %}
+{% set version = "1.15.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://github.com/microsoft/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: a7eb7067875b498a5db4ca75ae67c8b258b489ea85acce23e95a0d0d522c79ca
+  sha256: 21588945e9b844826e8326e17ed646f3dd2c2c387fe722b5138559c2567146bf
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -23,7 +23,7 @@ requirements:
     - packaging
     - python >={{ python_min }}
     - numpy
-    - protobuf ==3.20.2
+    - protobuf >=3.20.2
     - onnx
 
 test:
