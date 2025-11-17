@@ -10,6 +10,7 @@ source:
   # https://pypi.org/project/onnxconverter-common/1.16.0/#files
   # They accidentally tagged 1.16.0 as 0.16.0
   # https://github.com/microsoft/onnxconverter-common/issues/324
+  # https://github.com/microsoft/onnxconverter-common/issues/322
   url: https://github.com/microsoft/onnxconverter-common/archive/refs/tags/v{{ version | replace("1.16.0", "0.16.0") }}.tar.gz
   sha256: dc00ef7fbb014020cdf9bfaa93301cb13280ed79c23c394391fad1af5f03708e
 
