@@ -1,13 +1,13 @@
-{% set name = "onnxconverter-common" %}
-{% set version = "1.15.0" %}
+{% set version = "1.16.0" %}
 
 
 package:
-  name: {{ name|lower }}
+  name: onnxconverter-common
   version: {{ version }}
 
 source:
-  url: https://github.com/microsoft/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://github.com/microsoft/onnconverter-common/archive/v{{ version }}.tar.gz
+  # url: https://github.com/microsoft/onnxconverter-common/archive/refs/tags/v0.16.0.tar.gz
   sha256: 21588945e9b844826e8326e17ed646f3dd2c2c387fe722b5138559c2567146bf
 
 build:
@@ -44,3 +44,4 @@ about:
 extra:
   recipe-maintainers:
     - xhochy
+    - hmaarrfk
