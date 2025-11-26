@@ -1,14 +1,18 @@
-{% set name = "onnxconverter-common" %}
-{% set version = "1.15.0" %}
+{% set version = "1.16.0" %}
 
 
 package:
-  name: {{ name|lower }}
+  name: onnxconverter-common
   version: {{ version }}
 
 source:
-  url: https://github.com/microsoft/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 21588945e9b844826e8326e17ed646f3dd2c2c387fe722b5138559c2567146bf
+  # pypi doesn't include sdist:
+  # https://pypi.org/project/onnxconverter-common/1.16.0/#files
+  # They accidentally tagged 1.16.0 as 0.16.0
+  # https://github.com/microsoft/onnxconverter-common/issues/324
+  # https://github.com/microsoft/onnxconverter-common/issues/322
+  url: https://github.com/microsoft/onnxconverter-common/archive/refs/tags/v{{ version | replace("1.16.0", "0.16.0") }}.tar.gz
+  sha256: dc00ef7fbb014020cdf9bfaa93301cb13280ed79c23c394391fad1af5f03708e
 
 build:
   number: 0
@@ -44,3 +48,4 @@ about:
 extra:
   recipe-maintainers:
     - xhochy
+    - hmaarrfk
